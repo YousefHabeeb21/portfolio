@@ -585,13 +585,13 @@ footer {
 
 .resume-button-container {
     text-align: right;
+    
 }
 
 .resume-button {
     display: inline-block;
-  
-    padding: 12px 25px;
-    font-size: 1em;
+    /* padding: 15px 30px; */
+    font-size: 12em;
     color: #fff;
     background-color: #007acc;
     text-decoration: none;
