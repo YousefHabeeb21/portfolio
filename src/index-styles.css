@@ -588,20 +588,25 @@ footer {
     
 }
 
+
 .resume-button {
-    display: inline-block;
-    /* padding: 15px 30px; */
-    font-size: 12em;
-    color: #fff;
-    background-color: #007acc;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
+    width: 150px;
+    height: 60px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 550;
+    position: absolute;
+    right: 20px;
+    top: 40px;
 }
 
 .resume-button:hover {
-    background-color: #005f99;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: #315cfd;
+    color: white;
+    font-size: 1.2em;
 }
+
