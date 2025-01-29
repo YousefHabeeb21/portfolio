@@ -596,17 +596,19 @@ footer {
     border-radius: 45px;
     transition: all 0.3s;
     cursor: pointer;
-    background: white;
+    background: #007acc;
     font-size: 1.2em;
     font-weight: 550;
     position: absolute;
-    right: 20px;
-    top: 40px;
+    right: 23px;
+    top: 70px;
+    color: white; 
 }
 
 .resume-button:hover {
-    background: #315cfd;
-    color: white;
+    background: white;
+    color: black;
     font-size: 1.2em;
+    
 }
 
