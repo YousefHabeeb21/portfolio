@@ -380,8 +380,8 @@ footer {
     line-height: 1.6;
     text-align: justify;
     padding: 20px;
-    min-height: 300px;
-    max-width: 500px; 
+    min-height: 400px;
+    max-width: 450px; 
 }
 
 .timeline {
