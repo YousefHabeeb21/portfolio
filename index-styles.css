@@ -21,6 +21,56 @@ h2::after {
 }
 
 
+#education {
+    background-color: #fff;
+    padding: 60px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.09);
+    border-radius: 10px;
+
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    max-width: 900px;
+}
+
+.education-logo {
+    width: 80px;
+    height: auto;
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid #007acc;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+
+.education-details {
+    flex: 1;
+}
+
+.school-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.education-timestamp {
+    font-size: 1em;
+    color: #807d7d;
+    margin-bottom: 8px;
+}
+
+.education-description {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.5;
+}
 
 .container {
     max-width: 1200px;
@@ -307,11 +357,15 @@ footer {
     gap: 40px;
     align-items: center;
     background-color: #fffcfcde;
-    padding: 60px;
+    padding: 30px;
     border-radius: 8px;
+
 }
 
 .about-section img {
+    position: fixed;
+    top:80px;
+    right:30px;
     border-radius: 10%;
     width: 400px;
     height: auto;
@@ -326,6 +380,8 @@ footer {
     line-height: 1.6;
     text-align: justify;
     padding: 20px;
+    min-height: 300px;
+    max-width: 500px; 
 }
 
 .timeline {
