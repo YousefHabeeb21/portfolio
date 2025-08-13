@@ -36,7 +36,7 @@ h2::after {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin: 30px 0;
+    margin: -20px 0;
     max-width: 900px;
 }
 
