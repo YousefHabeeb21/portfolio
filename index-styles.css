@@ -20,6 +20,73 @@ h2::after {
     border-radius: 2px;
 }
 
+#certs {
+    background-color: #fff;
+    padding: 60px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.09);
+    border-radius: 10px;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.cert-card {
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #007acc;
+}
+
+.cert-icon {
+    flex-shrink: 0;
+}
+
+.cert-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.cert-details {
+    flex: 1;
+}
+
+.cert-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+    color: #007acc;
+}
+
+.cert-issuer {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.cert-date {
+    font-size: 1em;
+    color: #807d7d;
+    margin: 5px 0;
+}
+
 
 #education {
     background-color: #fff;
