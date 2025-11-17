@@ -31,9 +31,11 @@ h2::after {
 
 .certs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 30px;
     margin-top: 20px;
+    columns: 3;
+
 }
 
 .cert-card {
@@ -41,11 +43,12 @@ h2::after {
     border: 2px solid #e0e0e0;
     border-radius: 12px;
     padding: 25px;
-    display: flex;
     align-items: center;
-    gap: 20px;
+    /* gap: 10px; */
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  
 }
 
 
