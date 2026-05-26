@@ -1,23 +1,280 @@
-/* mobile-styles.css */
-@media (max-width: 900px) {
-    body {
-        transform: scale(0.85); 
-        transform-origin: top center;
-        overflow-x: hidden; 
-        width: auto;
+/* ─────────────────────────────────────────
+   iPad: 769px – 1024px
+   ───────────────────────────────────────── */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .container { padding: 16px; }
+
+    section { padding: 44px 36px; }
+
+    .about-section img { width: 220px; height: 220px; }
+
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .contact-layout { gap: 36px; }
+
+    .timeline-item { padding: 18px 22px; }
+}
+
+
+/* ─────────────────────────────────────────
+   iPhone & small tablets: ≤768px
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* ── Strip out the busy background on mobile ── */
+    body::before { display: none; }
+    body { background-color: #f0f4f8; }
+
+    /* ── Container ── */
+    .container { padding: 0 12px 12px; }
+
+    /* ── Sections: lighter, part of the page flow ── */
+    section {
+        padding: 28px 20px;
+        margin: 10px 0;
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        background: #fff;
     }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 22px;
+    }
+
+    /* ── Nav: swipeable strip ── */
+    nav {
+        justify-content: flex-start;
+        padding: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 0;
+    }
+    nav::-webkit-scrollbar { display: none; }
     nav a {
-        font-size: 2.5rem;
-        padding:10px;
+        padding: 13px 16px;
+        margin: 0;
+        font-size: 0.78em;
+        white-space: nowrap;
+        flex-shrink: 0;
+        border-bottom: 3px solid transparent;
+    }
+    nav a.active,
+    nav a:hover { border-bottom-color: #ffcc00; }
+
+    /* ── Header ── */
+    header {
+        padding: 44px 20px 36px;
+        border-radius: 0 0 20px 20px;
+    }
+    header h1 { font-size: 1.9em; }
+    .header-tagline { font-size: 0.95em; letter-spacing: 0.5px; }
+    .header-links { font-size: 0.82em; }
+
+    /* ── About: profile card feel ── */
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 28px 20px;
+        text-align: center;
+    }
+    .about-section img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 3px solid #007acc;
+        box-shadow: 0 4px 16px rgba(0,122,204,0.2);
+    }
+    .about-section div.text-content {
+        padding: 0;
+        font-size: 0.97em;
+        text-align: left;
     }
 
-
-    /* .about-section img {
-        
-        display:none;
-    } */
-    .container {
-        padding: 10px;
+    /* ── Education ── */
+    #education {
+        max-height: none;
+        padding: 28px 20px;
     }
-    
+    .education-item {
+        flex-direction: column;
+        gap: 14px;
+        max-width: 100%;
+    }
+    .education-logo { width: 56px; }
+
+    /* ── Certifications: horizontal scroll ── */
+    #certs {
+        padding: 22px 0 22px 20px;
+    }
+    #certs h2 {
+        margin-left: 0;
+        margin-bottom: 18px;
+    }
+    .certs-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 12px;
+        padding-right: 20px;
+        padding-bottom: 6px;
+        columns: unset;
+        grid-template-columns: unset;
+    }
+    .certs-grid::-webkit-scrollbar { display: none; }
+    .cert-card {
+        min-width: 165px;
+        max-width: 185px;
+        flex-shrink: 0;
+        padding: 14px 12px;
+    }
+    .cert-icon img {
+        width: 34px;
+        height: 34px;
+    }
+    .cert-details h3 {
+        font-size: 0.82em;
+        margin-bottom: 4px;
+    }
+    .cert-issuer { font-size: 0.78em; }
+    .cert-date { font-size: 0.73em; }
+
+    /* ── Experience: horizontal swipe cards ── */
+    #experience {
+        padding: 22px 0 22px 20px;
+    }
+    #experience h2 { margin-bottom: 16px; }
+    .resume-button {
+        position: static;
+        display: block;
+        width: fit-content;
+        margin: 0 0 16px 0;
+        font-size: 0.9em;
+        padding: 9px 16px;
+    }
+    .timeline::after { display: none; }
+    .timeline-item::before { display: none; }
+    .timeline-item::after { display: none; }
+    .timeline {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 14px;
+        padding-right: 20px;
+        padding-bottom: 6px;
+        align-items: flex-start;
+    }
+    .timeline::-webkit-scrollbar { display: none; }
+    .timeline-item {
+        min-width: 260px;
+        max-width: 280px;
+        width: auto;
+        flex-shrink: 0;
+        left: 0 !important;
+        padding: 16px 16px 16px 18px;
+        margin-bottom: 0;
+        border-radius: 12px;
+        border-left: 4px solid #007acc;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .timeline-item:hover { transform: none; }
+    .timeline-item .company-logo { width: 36px; margin-top: 0; }
+    .timeline-item h3 { font-size: 0.98em; }
+    .timeline-item .company-name { font-size: 0.88em; }
+    .timeline-item .timestamp { font-size: 0.8em; }
+    .timeline-item .experience-description { font-size: 0.8em; line-height: 1.6; }
+
+    /* ── Skills: swipeable rows per group ── */
+    .skills-group { margin-bottom: 20px; }
+    .skills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        padding-bottom: 6px;
+        gap: 10px;
+    }
+    .skills::-webkit-scrollbar { display: none; }
+    .skill-card {
+        flex-shrink: 0;
+        width: 82px;
+        min-height: 82px;
+        padding: 10px 6px;
+    }
+    .skill-card img { width: 36px; }
+    .skill-card h3 { font-size: 0.63em; }
+
+    /* ── Projects: horizontal swipe cards ── */
+    .projects-section {
+        padding: 22px 0 22px 20px;
+    }
+    .projects-section h2 { margin-bottom: 16px; }
+    .projects-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 14px;
+        padding-right: 20px;
+        padding-bottom: 6px;
+        grid-template-columns: unset;
+    }
+    .projects-grid::-webkit-scrollbar { display: none; }
+    .project-card {
+        min-width: 230px;
+        max-width: 250px;
+        flex-shrink: 0;
+        border-radius: 12px;
+    }
+    .project-card img { height: 130px; }
+    .project-card .description { padding: 13px; }
+    .project-card h3 { font-size: 0.98em; }
+    .project-card p { font-size: 0.82em; }
+
+    /* ── Contact: stacked ── */
+    .contact-section { padding: 28px 20px; }
+    .contact-layout {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .contact-left h2 { text-align: left; }
+    .contact-intro { font-size: 0.92em; }
+    .contact-card { padding: 13px 16px; }
+    .contact-card-value { font-size: 0.82em; }
+    .contact-form button { width: 100%; }
+
+    /* ── Footer ── */
+    footer { padding: 20px; font-size: 0.85em; }
+}
+
+
+/* ─────────────────────────────────────────
+   iPhone SE / small: ≤390px
+   ───────────────────────────────────────── */
+@media (max-width: 390px) {
+
+    header h1 { font-size: 1.6em; }
+    .header-tagline { font-size: 0.85em; }
+
+    section { padding: 24px 16px; }
+
+    h2 { font-size: 1.35em; }
+
+    .about-section img { width: 110px; height: 110px; }
+
+    .skill-card { width: 74px; min-height: 76px; }
+    .skill-card img { width: 30px; }
+
+    .timeline-item { min-width: 230px; max-width: 250px; padding: 14px 14px 14px 16px; }
+    .project-card { min-width: 200px; max-width: 220px; }
 }

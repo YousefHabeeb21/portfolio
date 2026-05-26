@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1000px, initial-scale=.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yousef Habeeb - Portfolio</title>
     <link rel="stylesheet" href="index-styles.css">
     <link rel="stylesheet" href="mobile-styles.css">
@@ -14,7 +14,12 @@
 <body>
     <header>
         <h1>Yousef Habeeb</h1>
-        <p>773-780-9134 | yousefmh21@gmail.com | <a href="https://www.linkedin.com/in/yousef-habeeb" target="_blank" style="color: #ffcc00;">LinkedIn</a> | <a href="https://github.com/YousefHabeeb21" target="_blank" style="color: #ffcc00;">GitHub</a></p>
+        <p class="header-tagline">Software Developer &nbsp;·&nbsp; Java &nbsp;·&nbsp; Python &nbsp;·&nbsp; SQL</p>
+        <p class="header-links">
+            <a href="mailto:yousefhabeeb61@gmail.com" style="color: #ffcc00;">yousefhabeeb61@gmail.com</a> &nbsp;|&nbsp;
+            <a href="https://www.linkedin.com/in/yousef-habeeb" target="_blank" style="color: #ffcc00;">LinkedIn</a> &nbsp;|&nbsp;
+            <a href="https://github.com/YousefHabeeb21" target="_blank" style="color: #ffcc00;">GitHub</a>
+        </p>
     </header>
     
     <nav>
@@ -30,7 +35,7 @@
         <section id="about" class="about-section">
             <div class="text-content">
                 <h2 class="fly-in">About Me</h2>
-                <p>I’m Yousef Habeeb—a CS grad from UIC and Application Developer at CBRE. I’m passionate about software development, teamwork, and building tech that solves real problems</p>
+                <p>I’m Yousef Habeeb — a Software Engineer based in Chicago. I currently build Java and JavaScript solutions at CBRE, where I work directly with enterprise clients across government and tech to ship software that runs real operations. I studied Computer Science at UIC, where I also did NLP research and taught Python and C as a TA. I like working close to the problem — whether that’s wiring up cloud APIs, optimizing a backend, or building a product from scratch. Currently open to new opportunities.</p>
             </div>
             <div>
                 <img src="assets/me.jpeg" alt="Yousef Habeeb Photo">
@@ -104,14 +109,15 @@
                         <img src="assets/cbre.png" alt="CBRE Logo" class="company-logo">
                         <div class="experience-details">
                             <h3>Software Developer</h3>
-                            <p class="company-name">CBRE</p>
+                            <p class="company-name">CBRE — Chicago, IL</p>
                             <p class="timestamp">June 2024 - Present</p>
                         </div>
                     </div>
-
-                <p class="experience-description">
-                    Engineer and optimize Java and JavaScript solutions within the Archibus platform, Collaborating with clients across various industries, including government and tech, to deliver tailored software
-                    solutions and ensure operational efficiency</p>
+                    <ul class="experience-description">
+                        <li>Engineered full-stack enterprise solutions for a space management platform serving <strong>5,000–15,000+ users</strong>, building frontend interfaces with JavaScript and XML and backend integrations with Java, Node.js, and SmartClient — improving response times by <strong>25–40%</strong>.</li>
+                        <li>Implemented GitHub Actions CI/CD pipelines that cut average deployment time from <strong>90 minutes to 8 minutes</strong> and eliminated manual release steps.</li>
+                        <li>Designed SQL Server stored procedures processing <strong>500K–2M+ records</strong> for migration projects, automating workflows with PowerShell and AWS — reducing deployment time by up to <strong>85%</strong>.</li>
+                    </ul>
                 </div>
             
 
@@ -121,30 +127,29 @@
                         <img src="assets/wya.jpg" alt="WYA Group Logo" class="company-logo">
                         <div class="experience-details">
                             <h3>Software Developer Intern</h3>
-                            <p class="company-name">WYA Group, Inc</p>
+                            <p class="company-name">WYA Group, Inc — Chicago, IL</p>
                             <p class="timestamp">January 2024 - June 2024</p>
                         </div>
                     </div>
-                    <p class="experience-description">
-                        Enhanced the mobile web application of WYA using React and Node.js while collaborating with the Development team to gather feedback and ensure the implemented features aligned with user
-needs and business goals.
-                    </p>
+                    <ul class="experience-description">
+                        <li>Revamped the core event platform with React and Node.js, integrating MongoDB for real-time guest tracking and automating workflows for <strong>1,000+ weekly invitations</strong> via SendGrid secured by JWT.</li>
+                        <li>Built a guest registration and RSVP system processing <strong>8,000–12,000 event registrations</strong> with real-time capacity management, automated waitlists, and confirmation tracking across <strong>300–500+ events</strong>.</li>
+                    </ul>
                 </div>
 
                 <div class="timeline-item">
                     <div class="experience-header">
-                        <img src="assets/murry.png" alt="UIC Logo" class="company-logo">
+                        <img src="assets/murry.png" alt="Boosted Biz Logo" class="company-logo">
                         <div class="experience-details">
                             <h3>Software Developer Intern</h3>
-                            <p class="company-name">Murry Ave</p>
+                            <p class="company-name">Boosted Biz — Chicago, IL</p>
                             <p class="timestamp">September 2023 - December 2023</p>
                         </div>
                     </div>
-                    <p class="experience-description">
-                        Developed and optimized Google Cloud Service APIs, improving efficiency and accelerating project timelines, led a high-impact 
-                        research project resulting in a recognized case study, and created innovative API call patterns with Java and Python optimizations 
-                        to enhance cloud application performance.
-                    </p>
+                    <ul class="experience-description">
+                        <li>Developed backend services with Python, JavaScript, and SQL, implementing RESTful APIs handling <strong>50K–100K daily requests</strong> and optimizations that improved query performance by <strong>40%</strong> for 10K+ users.</li>
+                        <li>Built e-commerce features using Angular and Python with automated order processing workflows — reducing fulfillment time by <strong>35%</strong> and handling <strong>$75K+ monthly revenue</strong>.</li>
+                    </ul>
                 </div>
 
 
@@ -157,13 +162,12 @@ needs and business goals.
                             <p class="timestamp">August 2023 - December 2024</p>
                         </div>
                     </div>
-                    <p class="experience-description">
-                        Facilitated group learning sessions in Python and C helping students strengthen their programming skills and gain
-a deeper understanding of computer science concepts.
-                    </p>
+                    <ul class="experience-description">
+                        <li>Mentored <strong>100+ students</strong> in programming fundamentals and data structures using Python, MATLAB, and C, conducting coaching sessions to help debug code and optimize algorithms.</li>
+                        <li>Led hands-on lab sessions for embedded systems projects using Arduino, providing technical support for circuit design and microcontroller programming.</li>
+                    </ul>
                 </div>
 
-                
                 <div class="timeline-item">
                     <div class="experience-header">
                         <img src="assets/uic.png" alt="UIC Logo" class="company-logo">
@@ -173,82 +177,155 @@ a deeper understanding of computer science concepts.
                             <p class="timestamp">January 2023 - August 2023</p>
                         </div>
                     </div>
-                    <p class="experience-description">
-                        Contributed to developing and optimizing neural network and XLNet models, significantly advancing the
-performance of the research team by uitlizing Python to improve data extraction from scientific texts as well as automating annotation and analysis tasks
-                    </p>
+                    <ul class="experience-description">
+                        <li>Contributed to developing and optimizing neural network and XLNet models, advancing research team performance by utilizing Python to improve data extraction from scientific texts.</li>
+                        <li>Automated annotation and analysis tasks, accelerating the research pipeline and reducing manual processing time.</li>
+                    </ul>
                 </div>
-                
+
             </div>
         </section>
 
 
         <section id="skills">
             <h2 class="fly-in">Skills</h2>
-            <div class="skills">
-            <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
-                    <h3>Python</h3>
+
+            <div class="skills-group">
+                <h4 class="skills-group-label">Languages</h4>
+                <div class="skills">
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Icon">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/golang.png" alt="Go Icon">
+                        <h3>Go</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++ Icon">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL Icon">
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
+                        <h3>HTML/CSS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript Icon">
+                        <h3>TypeScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C Icon">
+                        <h3>C</h3>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++ Icon">
-                    <h3>C++</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" alt="Java Icon">
-                    <h3>Java</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL Icon">
-                    <h3>SQL</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Icon">
-                    <h3>React.js</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js Icon">
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker Icon">
-                    <h3>Docker</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/fluency/48/000000/azure-1.png" alt="Azure Icon">
-                    <h3>Microsoft Azure</h3>
-                </div>
-                <!-- Added Skills -->
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter Icon">
-                    <h3>Flutter</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/tomcat.png" alt="Tomcat Icon">
-                    <h3>Apache Tomcat</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/golang.png" alt="Go Icon">
-                    <h3>Go</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git Icon">
-                    <h3>Git</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux Icon">
-                    <h3>Linux</h3>
-                </div>
-                <div class="skill-card">
-                    <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
-                    <h3>HTML/CSS</h3>
-                </div>
-                
             </div>
+
+            <div class="skills-group">
+                <h4 class="skills-group-label">Frameworks & Libraries</h4>
+                <div class="skills">
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React Icon">
+                        <h3>React.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js Icon">
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/angularjs.png" alt="Angular Icon">
+                        <h3>Angular</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/spring-logo.png" alt="Spring Boot Icon">
+                        <h3>Spring Boot</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/flask.png" alt="Flask Icon">
+                        <h3>Flask</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter Icon">
+                        <h3>Flutter</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/tomcat.png" alt="Tomcat Icon">
+                        <h3>Tomcat</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI Icon">
+                        <h3>FastAPI</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <h4 class="skills-group-label">Databases</h4>
+                <div class="skills">
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="PostgreSQL Icon">
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL Icon">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB Icon">
+                        <h3>MongoDB</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL Server Icon">
+                        <h3>SQL Server</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/elasticsearch.png" alt="Elasticsearch Icon">
+                        <h3>Elasticsearch</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-group">
+                <h4 class="skills-group-label">Cloud & Tools</h4>
+                <div class="skills">
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/96/000000/amazon-web-services.png" alt="AWS Icon">
+                        <h3>AWS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/fluency/48/000000/azure-1.png" alt="Azure Icon">
+                        <h3>Azure</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker Icon">
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git Icon">
+                        <h3>Git</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://img.icons8.com/color/48/000000/linux.png" alt="Linux Icon">
+                        <h3>Linux</h3>
+                    </div>
+                    <div class="skill-card">
+                        <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira Icon">
+                        <h3>Jira</h3>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
 
@@ -257,65 +334,107 @@ performance of the research team by uitlizing Python to improve data extraction 
             <h2 class="drop-down">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="assets/p1.png" alt="Project 1 Image">
+                    <img src="assets/p1.png" alt="Rex Chat Application">
                     <div class="description">
-                        <h3>Interactive Chat Application</h3>
-                        <p>Developed a real-time chat application bootstrapped with React.</p>
+                        <h3>Rex Chat</h3>
+                        <p>Real-time chat application with live messaging, user authentication, and persistent message history. Built with a React front-end and Node.js/Express back-end using WebSockets for instant delivery.</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">WebSockets</span>
+                            <span class="tag">Express</span>
+                        </div>
                     </div>
                     <div class="button-container">
-                        <a href="https://github.com/YousefHabeeb21/rex-chat" target="_blank">View Project</a>
+                        <a href="https://github.com/YousefHabeeb21/rex-chat" target="_blank">GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/pacman.png" alt="Project 2 Image">
+                    <img src="assets/pacman.png" alt="Voice Controlled Pac-Man">
                     <div class="description">
-                        <h3>Voice controlled Pacman</h3>
-                        <p>Created a voice controlled game using Microsoft Azure Speech recognition with Javascript.</p>
+                        <h3>Voice-Controlled Pac-Man</h3>
+                        <p>Classic Pac-Man reimagined with hands-free voice commands. Integrated Microsoft Azure Cognitive Speech SDK to translate spoken directions into real-time game input with low-latency recognition.</p>
+                        <div class="tech-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Azure Speech SDK</span>
+                            <span class="tag">HTML Canvas</span>
+                        </div>
                     </div>
                     <div class="button-container">
-                        <a href="https://github.com/YousefHabeeb21/pac-man" target="_blank">View Project</a>
+                        <a href="https://github.com/YousefHabeeb21/pac-man" target="_blank">GitHub</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="assets/wordle.png" alt="Project 3 Image">
+                    <img src="assets/wordle.png" alt="Wordle Solver">
                     <div class="description">
-                        <h3>Wordle Guesser</h3>
-                        <p>Created a program in C that uses Qsort algorithm to enhance the guessing algorithm in a game of wordle.</p>
+                        <h3>Wordle Solver</h3>
+                        <p>Algorithmic Wordle solver written in C that narrows the word pool each round using frequency analysis and qsort-based ranking — consistently solves the puzzle within 4 guesses.</p>
+                        <div class="tech-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Algorithms</span>
+                            <span class="tag">Data Structures</span>
+                        </div>
                     </div>
                     <div class="button-container">
-                        <a href="https://github.com/YousefHabeeb21/Wordle-guesses-" target="_blank">View Project</a>
+                        <a href="https://github.com/YousefHabeeb21/Wordle-guesses-" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact-section">
-            <h2 class="drop-down">Contact Me</h2>
-            <p>If you'd like to reach out, please fill out the form below or contact me via email or LinkedIn.</p>
-            
-            <div class="contact-info">
-            <a href="mailto:yousefmh21@gmail.com" class="contact-link">yousefmh21@gmail.com</a>
-            <a href="https://www.linkedin.com/in/yousef-habeeb" target="_blank" class="contact-link">LinkedIn</a>
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2 class="drop-down">Let's Connect</h2>
+                    <p class="contact-intro">Open to new opportunities, collaborations, or just a conversation. Reach out through any of the channels below or send a message directly.</p>
+                    <div class="contact-cards">
+                        <a href="mailto:yousefhabeeb61@gmail.com" class="contact-card">
+                            <span class="contact-card-icon">✉</span>
+                            <div>
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">yousefhabeeb61@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yousef-habeeb" target="_blank" class="contact-card">
+                            <span class="contact-card-icon">in</span>
+                            <div>
+                                <span class="contact-card-label">LinkedIn</span>
+                                <span class="contact-card-value">linkedin.com/in/yousef-habeeb</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/YousefHabeeb21" target="_blank" class="contact-card">
+                            <span class="contact-card-icon">⌥</span>
+                            <div>
+                                <span class="contact-card-label">GitHub</span>
+                                <span class="contact-card-value">github.com/YousefHabeeb21</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form class="contact-form" action="https://formspree.io/f/mzzbrpby" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </div>
-            
-            <form class="contact-form" action="https://formspree.io/f/mzzbrpby" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-        
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        
-            <button type="submit">Send Message</button>
-            </form>
         </section>
         
     </div>
 
     <footer>
-        <p>&copy; 2024 Yousef Habeeb</p>
+        <p>&copy; 2026 Yousef Habeeb</p>
     </footer>
 
     <script src="scripts.js"></script>
