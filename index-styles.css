@@ -463,6 +463,10 @@ footer {
     object-position: center top;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: auto;
 }
 
 .about-section div.text-content {

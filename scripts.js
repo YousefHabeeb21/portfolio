@@ -57,6 +57,39 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => navObserver.observe(section));
 
+// Mouse drag-to-scroll for horizontal containers on narrow desktop windows
+['.certs-grid', '.timeline', '.skills', '.projects-grid'].forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        el.addEventListener('mousedown', e => {
+            isDown = true;
+            el.style.cursor = 'grabbing';
+            startX = e.pageX - el.offsetLeft;
+            scrollLeft = el.scrollLeft;
+        });
+
+        el.addEventListener('mouseleave', () => {
+            isDown = false;
+            el.style.cursor = '';
+        });
+
+        el.addEventListener('mouseup', () => {
+            isDown = false;
+            el.style.cursor = '';
+        });
+
+        el.addEventListener('mousemove', e => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - el.offsetLeft;
+            el.scrollLeft = scrollLeft - (x - startX);
+        });
+    });
+});
+
 // Typewriter effect on About Me
 document.addEventListener('DOMContentLoaded', function () {
     const textElement = document.querySelector('.about-section .text-content p');
