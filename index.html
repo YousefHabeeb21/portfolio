@@ -35,7 +35,10 @@
         <section id="about" class="about-section">
             <div class="text-content">
                 <h2 class="fly-in">About Me</h2>
-                <p>I’m Yousef Habeeb — a Software Engineer based in Chicago. I currently build Java and JavaScript solutions at CBRE, where I work directly with enterprise clients across government and tech to ship software that runs real operations. I studied Computer Science at UIC, where I also did NLP research and taught Python and C as a TA. I like working close to the problem — whether that’s wiring up cloud APIs, optimizing a backend, or building a product from scratch. Currently open to new opportunities.</p>
+                <p>I’m Yousef Habeeb — a software engineer in Chicago drawn to the parts of a system people tend to route around: schema design, authorization, and the concurrency bugs that only surface when two people click at the same moment.</p>
+                <p>At CBRE I build a space-management platform used by 5,000–15,000 people to run real operations, across Java, JavaScript, SQL Server and AWS, and I moved our releases onto GitHub Actions so deploys run themselves instead of being walked through by hand. Before that: event and e-commerce platforms, an NLP research team at UIC working on XLNet models for scientific text, and a TA job teaching Python, C and MATLAB to 100+ students.</p>
+                <p>Most recently I’ve been building clinical-trial recruitment software end to end — the Postgres schema, a capability-based auth layer that the server and the UI both read from, an append-only audit trail, and the 281 tests that keep it honest.</p>
+               
             </div>
             <div>
                 <img src="assets/me.jpeg" alt="Yousef Habeeb Photo">
@@ -115,7 +118,7 @@
                     </div>
                     <ul class="experience-description">
                         <li>Engineered full-stack enterprise solutions for a space management platform serving <strong>5,000–15,000+ users</strong>, building frontend interfaces with JavaScript and XML and backend integrations with Java, Node.js, and SmartClient — improving response times by <strong>25–40%</strong>.</li>
-                        <li>Implemented GitHub Actions CI/CD pipelines that cut average deployment time from <strong>90 minutes to 8 minutes</strong> and eliminated manual release steps.</li>
+                        <li>Implemented <strong>GitHub Actions CI/CD pipelines</strong> that replaced a manual, hand-run release process with an automated one — making deployments repeatable and removing the steps most likely to be done wrong under pressure.</li>
                         <li>Designed SQL Server stored procedures processing <strong>500K–2M+ records</strong> for migration projects, automating workflows with PowerShell and AWS — reducing deployment time by up to <strong>85%</strong>.</li>
                     </ul>
                 </div>
@@ -334,6 +337,23 @@
             <h2 class="drop-down">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <img src="assets/studies-hub.png" alt="Studies Hub recruitment portal dashboard">
+                    <div class="description">
+                        <h3>Studies Hub</h3>
+                        <p>A clinical-trial recruitment portal built to production healthcare standards. Patient identifiers are quarantined in a single store that is never joined in SQL, Postgres row-level security scopes every query to one clinic, and one capability table drives authorization across both the server and the UI. Every change lands on an append-only audit trail inside the same transaction, and concurrency is settled by database constraints rather than application code — all behind 281 tests that need no database to run.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Row-Level Security</span>
+                            <span class="tag">RBAC</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <a href="#contact" class="private-repo">Private repo — request access →</a>
+                    </div>
+                </div>
+                <div class="project-card">
                     <img src="assets/p1.png" alt="Rex Chat Application">
                     <div class="description">
                         <h3>Rex Chat</h3>
@@ -362,21 +382,6 @@
                     </div>
                     <div class="button-container">
                         <a href="https://github.com/YousefHabeeb21/pac-man" target="_blank">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="assets/wordle.png" alt="Wordle Solver">
-                    <div class="description">
-                        <h3>Wordle Solver</h3>
-                        <p>Algorithmic Wordle solver written in C that narrows the word pool each round using frequency analysis and qsort-based ranking — consistently solves the puzzle within 4 guesses.</p>
-                        <div class="tech-tags">
-                            <span class="tag">C</span>
-                            <span class="tag">Algorithms</span>
-                            <span class="tag">Data Structures</span>
-                        </div>
-                    </div>
-                    <div class="button-container">
-                        <a href="https://github.com/YousefHabeeb21/Wordle-guesses-" target="_blank">GitHub</a>
                     </div>
                 </div>
             </div>

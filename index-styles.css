@@ -1,5 +1,9 @@
 h2 {
-    font-size: 2.5em;
+    /* rem, not em: `em` compounds off the parent, so the About heading — which lives
+       inside .text-content (1.2em) — rendered at 48px while every other section
+       heading rendered at 40px. rem is measured against the root, so all headings
+       match regardless of what they sit inside. */
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 60px;
     position: relative;
@@ -352,7 +356,6 @@ section.visible {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .project-card img {
@@ -384,10 +387,15 @@ section.visible {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Cards in a grid row all stretch to the tallest one. `margin-top: auto` sends that
+   spare height here, pinning the button to the bottom — instead of `space-between` on
+   the card, which shared the slack out and opened a gap between the image and the
+   title on every card shorter than the longest description. */
 .button-container {
     text-align: center;
     padding: 16px 20px 20px;
     background-color: transparent;
+    margin-top: auto;
 }
 
 .project-card a {
@@ -403,6 +411,31 @@ section.visible {
 
 .project-card a:hover {
     background-color: #005f99;
+}
+
+/* The repo is private, so this cannot link to GitHub — but "available on request" with
+   nowhere to click is a dead end. It goes to the contact section instead, where the
+   form and the three channels already live. Styled as a secondary action: clearly
+   pressable, but not competing with the primary blue GitHub buttons beside it.
+   Selector is `.button-container a.private-repo` so it outranks `.button-container a`,
+   which would otherwise paint it as a primary button. */
+.button-container a.private-repo {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: #475569;
+    background-color: #f3f4f6;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.button-container a.private-repo:hover {
+    background-color: #e6eaef;
+    border-color: #c3cad3;
+    color: #1f2937;
 }
 
 .tech-tags {
@@ -476,6 +509,49 @@ footer {
     line-height: 1.6;
     text-align: left;
     padding: 20px;
+}
+
+/* Was one long block of prose; now three short paragraphs, so they need their own
+   rhythm rather than the browser default. */
+.about-section .text-content p { margin: 0 0 14px; }
+.about-section .text-content p:last-of-type { margin-bottom: 0; }
+
+/* The numbers were buried in the Work Experience bullets, where nobody reads them
+   until they have already decided to keep scrolling. Surfaced here as the first thing
+   the eye lands on. Same palette as .tag, so the section stays part of the system. */
+.about-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.about-stat {
+    flex: 1 1 130px;
+    background-color: #e8f4fd;
+    border: 1px solid #b3d9f2;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.about-stat-value {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #007acc;
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+}
+
+.about-stat-label {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.62em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #5b6b7a;
+    line-height: 1.35;
 }
 
 .timeline {

@@ -1,5 +1,6 @@
-// Smooth scroll for nav links
-document.querySelectorAll('nav a').forEach(anchor => {
+// Smooth scroll for nav links, plus any in-page card action that jumps to a section
+// (the private-repo button sends people to the contact form).
+document.querySelectorAll('nav a, a.private-repo').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -90,21 +91,43 @@ sections.forEach(section => navObserver.observe(section));
     });
 });
 
-// Typewriter effect on About Me
+// Typewriter effect on About Me — every paragraph, typed in order.
+//
+// This used to call querySelector, which returns only the FIRST match. That was fine
+// while About Me was a single <p>, but the moment it became three the effect ran on
+// paragraph one and the rest simply appeared. querySelectorAll + a queue keeps the
+// effect whole however many paragraphs the section grows to.
 document.addEventListener('DOMContentLoaded', function () {
-    const textElement = document.querySelector('.about-section .text-content p');
-    if (!textElement) return;
-    const text = textElement.textContent;
-    textElement.textContent = '';
-    let index = 0;
+    const paragraphs = document.querySelectorAll('.about-section .text-content p');
+    if (!paragraphs.length) return;
 
-    function typeWriter() {
-        if (index < text.length) {
-            textElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 12);
-        }
+    const SPEED_MS = 6;   // ~700 characters of About copy; 12ms made it a 9-second wait
+
+    // Measure each paragraph BEFORE emptying it and pin that height, so the section
+    // does not grow line by line and shove the rest of the page down while it types.
+    const queue = [];
+    paragraphs.forEach(function (p) {
+        queue.push({ el: p, text: p.textContent });
+        p.style.minHeight = p.offsetHeight + 'px';
+        p.textContent = '';
+    });
+
+    function typeParagraph(i) {
+        if (i >= queue.length) return;
+        const job = queue[i];
+        let index = 0;
+
+        (function step() {
+            if (index < job.text.length) {
+                job.el.textContent += job.text.charAt(index);
+                index++;
+                setTimeout(step, SPEED_MS);
+            } else {
+                job.el.style.minHeight = '';   // release the reserved space
+                typeParagraph(i + 1);
+            }
+        })();
     }
 
-    typeWriter();
+    typeParagraph(0);
 });
